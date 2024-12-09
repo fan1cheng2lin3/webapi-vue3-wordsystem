@@ -1,0 +1,6 @@
+@MyWordStystemWebapi_HostAddress = http://localhost:5134
+
+GET {{MyWordStystemWebapi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
