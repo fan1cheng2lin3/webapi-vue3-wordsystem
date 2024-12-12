@@ -8,7 +8,6 @@ namespace MyWordStystemWebapi.DOT.Dtos
         [Key]
         public int Id { get; set; }
 
-
         public string? WordBookName { get; set; }
 
     }

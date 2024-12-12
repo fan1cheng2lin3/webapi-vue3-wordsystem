@@ -28,4 +28,29 @@ public class CiKuWord
 
     [Column("ancillary")]
     public string? ancillary { get; set; }
+
+    [Column("similar1")]
+    public string? similar1 { get; set; }
+
+    [Column("similar2")]
+    public string? similar2 { get; set; }
+
+    [Column("similar3")]
+    public string? similar3 { get; set; }
+
+    [Column("similar4")]
+    public string? similar4 { get; set; }
+
+    [Column("similar1_explain")]
+    public string? similar1_explain { get; set; }
+
+    [Column("similar2_explain")]
+    public string? similar2_explain { get; set; }
+
+    [Column("similar3_explain")]
+    public string? similar3_explain { get; set; }
+
+    [Column("similar4_explain")]
+    public string? similar4_explain { get; set; }
+
 }

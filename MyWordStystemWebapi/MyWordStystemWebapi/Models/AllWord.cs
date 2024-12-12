@@ -32,6 +32,17 @@ namespace MyWordStystemWebapi.Models
         public string? ancillary { get; set; }
 
 
+        [Column("similar1")]
+        public string? similar1 { get; set; }
+
+        [Column("similar2")]
+        public string? similar2 { get; set; }
+
+        [Column("similar3")]
+        public string? similar3 { get; set; }
+
+        [Column("similar4")]
+        public string? similar4 { get; set; }
 
     }
 }

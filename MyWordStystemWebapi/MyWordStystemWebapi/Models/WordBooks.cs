@@ -8,5 +8,7 @@
         public int? WordId { get; set; }
 
         public string? WordBookName { get; set; }
+    
+
     }
 }

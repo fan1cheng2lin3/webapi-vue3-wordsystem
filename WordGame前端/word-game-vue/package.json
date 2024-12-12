@@ -10,9 +10,14 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "axios": "^1.7.9",
+    "buffer": "^6.0.3",
     "core-js": "^3.8.3",
+    "crypto-browserify": "^3.12.1",
     "element-plus": "^2.9.0",
     "jsonwebtoken": "^9.0.2",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "util": "^0.12.5",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
