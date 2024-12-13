@@ -7,6 +7,7 @@
       <div class="nav-container">
         <span class="nav-item" @click="goBack">首页</span>
         <span class="nav-item" @click="gociku">词库</span>
+        <span class="nav-item" @click="godate">数据</span>
       </div>
 
       <!-- 搜索框 -->
@@ -72,10 +73,13 @@ const searchFocused = ref(false);
 const goBack = () => {
   router.push({ name: 'zhuyeView' });
 };
-const gociku = () => {
 
-  
+const gociku = () => {
   router.push({ name: 'CikuView' });
+};
+
+const godate = () => {
+  router.push({ name: 'aaa' });
 };
 
 // 搜索

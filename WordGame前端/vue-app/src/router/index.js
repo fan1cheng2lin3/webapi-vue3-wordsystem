@@ -48,6 +48,16 @@ const routes = [
         name: 'ccc',
         component: () => import('../views/HHHView.vue')
       },
+      {
+        path: '/aaa',
+        name: 'aaa',
+        component: () => import('../views/DataView.vue')
+      },
+      {
+        path: '/putbook',
+        name: 'putbook',
+        component: () => import('../views/PutbookView.vue')
+      },
     ]
   },
 

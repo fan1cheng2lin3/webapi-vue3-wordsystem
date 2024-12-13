@@ -29,7 +29,7 @@ export const isTokenFromLocalStorageVaild=()=>{
     const dateNow = Date.now();
 
     // token 中的过期时间，单位是秒，转换为毫秒
-    const expiresAt = decoded.exp * 1000;
+    const expiresAt = decoded.exp * 10000;
 
     // 比较当前时间和 token 的过期时间，如果当前时间大于或等于过期时间，则 token 已经过期
     return dateNow >= expiresAt;

@@ -7,18 +7,6 @@
       "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\controllers\\wordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\services\\implmentation\\cikuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\services\\implmentation\\cikuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\services\\interfaces\\icikuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\services\\interfaces\\icikuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\controllers\\learningprogresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\controllers\\learningprogresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\models\\myciku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\models\\myciku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,40 +15,44 @@
       "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\models\\learningprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\dot\\dtos\\addwordbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\dot\\dtos\\addwordbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\data\\myworddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\data\\myworddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\dot\\dtos\\importwordsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\dot\\dtos\\importwordsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\controllers\\learningprogresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\controllers\\learningprogresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\models\\wordbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\models\\wordbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\dot\\dtos\\studytimerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\dot\\dtos\\studytimerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\dot\\dtos\\deletewordbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\dot\\dtos\\deletewordbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\models\\studydate_table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\models\\studydate_table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\services\\implmentation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\services\\implmentation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\dot\\dtos\\studytimedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\dot\\dtos\\studytimedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\dot\\dtos\\startworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\dot\\dtos\\startworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\dot\\dtos\\updatebooknanmedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\dot\\dtos\\updatebooknanmedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\controllers\\addwordbookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\controllers\\addwordbookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\services\\implmentation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\services\\implmentation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,12 +63,44 @@
       "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\mywordstystemwebapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\mywordstystemwebapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\services\\interfaces\\icikuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\services\\interfaces\\icikuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\dot\\dtos\\addwordbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\dot\\dtos\\addwordbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\dot\\dtos\\deletewordbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\dot\\dtos\\deletewordbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\services\\implmentation\\cikuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\services\\implmentation\\cikuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\dot\\dtos\\importwordsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\dot\\dtos\\importwordsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\models\\wordbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\models\\wordbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\dot\\dtos\\updatebooknanmedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\dot\\dtos\\updatebooknanmedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\mywordstystemwebapi\\mywordstystemwebapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9CC1FFDA-C8B7-4866-9D26-1B12E5202996}|MyWordStystemWebapi\\MyWordStystemWebapi.csproj|solutionrelative:mywordstystemwebapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -96,7 +120,7 @@
               "RelativeDocumentMoniker": "MyWordStystemWebapi\\Controllers\\wordsController.cs",
               "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Controllers\\wordsController.cs",
               "RelativeToolTip": "MyWordStystemWebapi\\Controllers\\wordsController.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAhwE0AAAAAAAAA",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAlwIQAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T11:09:12.61Z",
               "IsPinned": true,
@@ -104,13 +128,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "LearningProgressController.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Controllers\\LearningProgressController.cs",
               "RelativeDocumentMoniker": "MyWordStystemWebapi\\Controllers\\LearningProgressController.cs",
               "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Controllers\\LearningProgressController.cs",
               "RelativeToolTip": "MyWordStystemWebapi\\Controllers\\LearningProgressController.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAADgv1gAAAAQAAAA",
+              "ViewState": "AQIAAH4AAAAAAAAAAADwv4IAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T11:09:44.453Z",
               "IsPinned": true,
@@ -122,85 +146,228 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CiKuService.cs",
-              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Services\\Implmentation\\CiKuService.cs",
-              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Services\\Implmentation\\CiKuService.cs",
-              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Services\\Implmentation\\CiKuService.cs",
-              "RelativeToolTip": "MyWordStystemWebapi\\Services\\Implmentation\\CiKuService.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAIA4wDEAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T11:10:01.33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "deletewordbook.cs",
-              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\DOT\\Dtos\\deletewordbook.cs",
-              "RelativeDocumentMoniker": "MyWordStystemWebapi\\DOT\\Dtos\\deletewordbook.cs",
-              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\DOT\\Dtos\\deletewordbook.cs",
-              "RelativeToolTip": "MyWordStystemWebapi\\DOT\\Dtos\\deletewordbook.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAswA0AAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T07:17:42.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "addwordbookDto.cs",
-              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\DOT\\Dtos\\addwordbookDto.cs",
-              "RelativeDocumentMoniker": "MyWordStystemWebapi\\DOT\\Dtos\\addwordbookDto.cs",
-              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\DOT\\Dtos\\addwordbookDto.cs",
-              "RelativeToolTip": "MyWordStystemWebapi\\DOT\\Dtos\\addwordbookDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Title": "Studydate_Table.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Models\\Studydate_Table.cs",
+              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Models\\Studydate_Table.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Models\\Studydate_Table.cs",
+              "RelativeToolTip": "MyWordStystemWebapi\\Models\\Studydate_Table.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T11:53:31.934Z",
+              "WhenOpened": "2024-12-13T14:58:17.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StudyTimeDto.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\DOT\\Dtos\\StudyTimeDto.cs",
+              "RelativeDocumentMoniker": "MyWordStystemWebapi\\DOT\\Dtos\\StudyTimeDto.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\DOT\\Dtos\\StudyTimeDto.cs",
+              "RelativeToolTip": "MyWordStystemWebapi\\DOT\\Dtos\\StudyTimeDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:09:04.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AddWordBookController.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Controllers\\AddWordBookController.cs",
+              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Controllers\\AddWordBookController.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Controllers\\AddWordBookController.cs",
+              "RelativeToolTip": "MyWordStystemWebapi\\Controllers\\AddWordBookController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T09:34:22.876Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "LearningProgress.cs",
-              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Models\\LearningProgress.cs",
-              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Models\\LearningProgress.cs",
-              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Models\\LearningProgress.cs",
-              "RelativeToolTip": "MyWordStystemWebapi\\Models\\LearningProgress.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
+              "Title": "StudyTimeRequest.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\DOT\\Dtos\\StudyTimeRequest.cs",
+              "RelativeDocumentMoniker": "MyWordStystemWebapi\\DOT\\Dtos\\StudyTimeRequest.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\DOT\\Dtos\\StudyTimeRequest.cs",
+              "RelativeToolTip": "MyWordStystemWebapi\\DOT\\Dtos\\StudyTimeRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAswAQAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T13:32:46.781Z",
+              "WhenOpened": "2024-12-13T09:33:52.427Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Myciku.cs",
-              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Models\\Myciku.cs",
-              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Models\\Myciku.cs",
-              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Models\\Myciku.cs",
-              "RelativeToolTip": "MyWordStystemWebapi\\Models\\Myciku.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAzwCEAAAAtAAAA",
+              "DocumentIndex": 11,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Services\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Services\\Interfaces\\IUserService.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Services\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "MyWordStystemWebapi\\Services\\Interfaces\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAswA0AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T11:47:16.901Z",
+              "WhenOpened": "2024-12-10T11:18:47.314Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 13,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Models\\User.cs",
+              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Models\\User.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Models\\User.cs",
+              "RelativeToolTip": "MyWordStystemWebapi\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAswAcAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T11:53:09.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Program.cs",
+              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Program.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Program.cs",
+              "RelativeToolTip": "MyWordStystemWebapi\\Program.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAGoAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T17:44:07.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MywordDbContext.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Data\\MywordDbContext.cs",
+              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Data\\MywordDbContext.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Data\\MywordDbContext.cs",
+              "RelativeToolTip": "MyWordStystemWebapi\\Data\\MywordDbContext.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAIwB8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T11:49:14.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Services\\Implmentation\\UserService.cs",
+              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Services\\Implmentation\\UserService.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Services\\Implmentation\\UserService.cs",
+              "RelativeToolTip": "MyWordStystemWebapi\\Services\\Implmentation\\UserService.cs",
+              "ViewState": "AQIAAGUAAAAAAAAAAIA9wHoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T13:13:25.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "MyWordStystemWebapi\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAHYAAAAAAAAAAAAMwIYAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T03:33:40.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MyWordStystemWebapi.http",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\MyWordStystemWebapi.http",
+              "RelativeDocumentMoniker": "MyWordStystemWebapi\\MyWordStystemWebapi.http",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\MyWordStystemWebapi.http",
+              "RelativeToolTip": "MyWordStystemWebapi\\MyWordStystemWebapi.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-12-13T06:03:58.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "ICiKuService.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Services\\Interfaces\\ICiKuService.cs",
               "RelativeDocumentMoniker": "MyWordStystemWebapi\\Services\\Interfaces\\ICiKuService.cs",
               "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Services\\Interfaces\\ICiKuService.cs",
               "RelativeToolTip": "MyWordStystemWebapi\\Services\\Interfaces\\ICiKuService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAswAwAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T11:21:38.416Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
+              "Title": "addwordbookDto.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\DOT\\Dtos\\addwordbookDto.cs",
+              "RelativeDocumentMoniker": "MyWordStystemWebapi\\DOT\\Dtos\\addwordbookDto.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\DOT\\Dtos\\addwordbookDto.cs",
+              "RelativeToolTip": "MyWordStystemWebapi\\DOT\\Dtos\\addwordbookDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T11:53:31.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "deletewordbook.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\DOT\\Dtos\\deletewordbook.cs",
+              "RelativeDocumentMoniker": "MyWordStystemWebapi\\DOT\\Dtos\\deletewordbook.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\DOT\\Dtos\\deletewordbook.cs",
+              "RelativeToolTip": "MyWordStystemWebapi\\DOT\\Dtos\\deletewordbook.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAswAkAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T07:17:42.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Myciku.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Models\\Myciku.cs",
+              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Models\\Myciku.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Models\\Myciku.cs",
+              "RelativeToolTip": "MyWordStystemWebapi\\Models\\Myciku.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAkwAUAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T11:47:16.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CiKuService.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Services\\Implmentation\\CiKuService.cs",
+              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Services\\Implmentation\\CiKuService.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Services\\Implmentation\\CiKuService.cs",
+              "RelativeToolTip": "MyWordStystemWebapi\\Services\\Implmentation\\CiKuService.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAnwIEAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T11:10:01.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LearningProgress.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Models\\LearningProgress.cs",
+              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Models\\LearningProgress.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Models\\LearningProgress.cs",
+              "RelativeToolTip": "MyWordStystemWebapi\\Models\\LearningProgress.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAswAIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:32:46.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "ImportWordsDto.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\DOT\\Dtos\\ImportWordsDto.cs",
               "RelativeDocumentMoniker": "MyWordStystemWebapi\\DOT\\Dtos\\ImportWordsDto.cs",
@@ -213,7 +380,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 22,
               "Title": "WordBooks.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Models\\WordBooks.cs",
               "RelativeDocumentMoniker": "MyWordStystemWebapi\\Models\\WordBooks.cs",
@@ -226,7 +393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 20,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\appsettings.json",
               "RelativeDocumentMoniker": "MyWordStystemWebapi\\appsettings.json",
@@ -240,45 +407,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "MywordDbContext.cs",
-              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Data\\MywordDbContext.cs",
-              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Data\\MywordDbContext.cs",
-              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Data\\MywordDbContext.cs",
-              "RelativeToolTip": "MyWordStystemWebapi\\Data\\MywordDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T11:49:14.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Services\\Implmentation\\UserService.cs",
-              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Services\\Implmentation\\UserService.cs",
-              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Services\\Implmentation\\UserService.cs",
-              "RelativeToolTip": "MyWordStystemWebapi\\Services\\Implmentation\\UserService.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAASwGcAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T13:13:25.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "StartwordDto.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\DOT\\Dtos\\StartwordDto.cs",
               "RelativeDocumentMoniker": "MyWordStystemWebapi\\DOT\\Dtos\\StartwordDto.cs",
               "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\DOT\\Dtos\\StartwordDto.cs",
               "RelativeToolTip": "MyWordStystemWebapi\\DOT\\Dtos\\StartwordDto.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAIwA8AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T13:34:00.526Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 23,
               "Title": "updatebooknanmeDto.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\DOT\\Dtos\\updatebooknanmeDto.cs",
               "RelativeDocumentMoniker": "MyWordStystemWebapi\\DOT\\Dtos\\updatebooknanmeDto.cs",
@@ -291,46 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Program.cs",
-              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Program.cs",
-              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Program.cs",
-              "RelativeToolTip": "MyWordStystemWebapi\\Program.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAASwGoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T17:44:07.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Services\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Services\\Interfaces\\IUserService.cs",
-              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Services\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "MyWordStystemWebapi\\Services\\Interfaces\\IUserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAswAgAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T11:18:47.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Models\\User.cs",
-              "RelativeDocumentMoniker": "MyWordStystemWebapi\\Models\\User.cs",
-              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Models\\User.cs",
-              "RelativeToolTip": "MyWordStystemWebapi\\Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T11:53:09.942Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\vue\u002Bwebapi\u6700\u7EC8\u7248\\MyWordStystemWebapi\\MyWordStystemWebapi\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "MyWordStystemWebapi\\Properties\\launchSettings.json",

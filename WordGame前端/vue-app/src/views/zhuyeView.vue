@@ -20,11 +20,11 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 const review = () => {
-  router.push('/ccc');
+  router.push('/ddd');
 };
 
 const logout = () => {
-  router.push('/ddd');
+  router.push('/Xuexi');
 };
 </script>
 

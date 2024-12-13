@@ -123,6 +123,10 @@ namespace MyWordStystemWebapi.Controllers
 
 
 
+
+ 
+
+
         [HttpGet("GetAllWordsBymyViewName/{viewName}")]
         public async Task<ActionResult<List<Myciku>>> GetAllWordsBymyViewNameAsync(string viewName)
         {
@@ -159,7 +163,22 @@ namespace MyWordStystemWebapi.Controllers
             return Ok(words);
         }
 
-      
+
+        [HttpGet("GetUnlearnedStartWordsBymyViewName")]
+        public async Task<ActionResult<List<Myciku>>> GetUnlearnedStartWordsBymyViewNameAsync()
+        {
+            var userId = GetUserIdFromToken(); // 从 token 中获取用户 ID
+            if (userId == null)
+            {
+                return Unauthorized("无效的或过期的 token"); // 如果 token 无效或过期
+            }
+            Console.WriteLine($"User ID from token: {userId}");
+
+            var words = await _ciKuService.GetUnlearnedStartWordsBymyViewNameAsync(Convert.ToInt32(userId)); // 使用await等待异步结果
+
+            return Ok(words);
+        }
+
 
 
         [HttpGet("search")]

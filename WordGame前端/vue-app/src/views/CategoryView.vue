@@ -42,7 +42,6 @@
 
 <script  setup>
 
-
 import { reactive,onMounted,ref,provide } from 'vue';
 import axios from "@/api/api_config";
 import AddCategory from '@/components/AddCategory.vue';
@@ -57,7 +56,6 @@ const tableRow = ref({})
 
 
 //-----------------------------------
-
 
 onMounted(()=>{
 // getList()

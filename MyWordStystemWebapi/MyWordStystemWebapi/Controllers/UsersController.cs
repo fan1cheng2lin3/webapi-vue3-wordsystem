@@ -110,6 +110,25 @@ namespace MyWordStystemWebapi.Controllers
             return Ok(true);
         }
 
+     
+
+        [HttpPut("change-wordbook")]
+        public ActionResult<bool> ChangeWookbook([FromBody] string Wordbook)
+        {
+            var userId = GetUserIdFromToken(); // 从 token 中获取用户 ID
+            if (userId == null)
+            {
+                return Unauthorized("无效的或过期的 token"); // 如果 token 无效或过期
+            }
+
+            var success = _userService.ChangeWookbook(Convert.ToInt32(userId), Wordbook);
+            if (!success)
+            {
+                return BadRequest(new { message = "修改词书失败" });
+            }
+            return Ok(true);
+        }
+
 
 
         [HttpPost("register")]
@@ -124,7 +143,7 @@ namespace MyWordStystemWebapi.Controllers
         }
 
         //获取用户在学词书
-        [HttpGet("getprogress")]
+        [HttpGet("getbook")]
         public async Task<IActionResult> Getprogress()
         {
             var userId = GetUserIdFromToken(); // 从 token 中获取用户 ID

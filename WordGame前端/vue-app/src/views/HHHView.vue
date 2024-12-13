@@ -15,7 +15,6 @@
               <div>例句：{{ currentWord.sentence_en }} | {{ currentWord.sentence_cn }}</div>
             
             
-            
             </div>
             <div v-else>
               <p>所有单词已显示完毕。</p>
@@ -51,7 +50,7 @@
     loading.value = true;
     try {
       // 1. 获取用户词书名称
-      const progressResponse = await axios.get("/Users/getprogress");
+      const progressResponse = await axios.get("/Users/getbook");
       if (progressResponse.data && progressResponse.data.length > 0) {
         wordBook.value = progressResponse.data[0].wordbook; // 假设取第一个词书
       } else {

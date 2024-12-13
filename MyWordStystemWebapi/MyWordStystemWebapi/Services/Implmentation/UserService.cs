@@ -122,6 +122,23 @@ namespace MyWordStystemWebapi.Services.Implmentation
             return true;
         }
 
+
+
+        public bool ChangeWookbook(int userId,  string Wordbook)
+        {
+            var user = _context.user_Table.Find(userId);
+            if (user == null)
+            {
+                return false; // 用户不存在
+            }
+
+        
+            user.Wordbook = Wordbook; 
+            _context.SaveChanges();
+            return true;
+        }
+
+
         public bool ChangePassword(int userId, string newPassword)
         {
             var user = _context.user_Table.Find(userId);

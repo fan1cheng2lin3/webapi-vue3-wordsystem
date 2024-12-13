@@ -13,6 +13,7 @@
     "axios": "^1.7.7",
     "core-js": "^3.8.3",
     "crypto-browserify": "^3.12.1",
+    "echarts": "^5.5.1",
     "element-plus": "^2.8.8",
     "glob": "^9.0.0",
     "html2canvas": "^1.4.1",

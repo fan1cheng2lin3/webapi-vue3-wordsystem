@@ -124,6 +124,38 @@ namespace MyWordStystemWebapi.Services.Implmentation
         }
 
 
+        public async Task<List<Myciku>> GetUnlearnedStartWordsBymyViewNameAsync(int userid)
+        {
+            int pageNumber = 1;
+            int pageSize = 500;
+
+            // 使用 ROW_NUMBER() 来为每个 WordPre 分配行号，并过滤重复的 WordPre
+            var query = @"
+        WITH CTE AS (
+            SELECT *, ROW_NUMBER() OVER (PARTITION BY WordPre ORDER BY WordId) AS RowNum
+            FROM WordBookView
+            WHERE UserId = @UserId AND Status = 'start'
+        )
+        SELECT *
+        FROM CTE
+        WHERE RowNum = 1 AND WordId NOT IN (
+            SELECT WordId 
+            FROM progress 
+            WHERE UserId = @UserId
+        )
+        ORDER BY WordId
+        OFFSET @Offset ROWS
+        FETCH NEXT @PageSize ROWS ONLY";
+
+            // 使用异步查询和参数化查询
+            var words = await _context.WordBookView.FromSqlRaw(query,
+                new SqlParameter("@UserId", userid),
+                new SqlParameter("@Offset", (pageNumber - 1) * pageSize),
+                new SqlParameter("@PageSize", pageSize)).ToListAsync();
+
+            return words;
+        }
+
 
 
         //public async Task<List<Myciku>> GetAllWordsBymyViewNameAsync(int userid, string wordbook)

@@ -11,12 +11,13 @@ namespace MyWordStystemWebapi.Services.Interfaces
 
         User GetUserByEmail(string email);
 
-
+        bool ChangeWookbook(int userId, string Wordbook);
         bool ChangePassword(int userId, string currentPassword, string newPassword);
 
         bool ChangePassword(int userId, string newPassword);
 
         bool RegisterUser(User user, string password);
+
 
     }
 }

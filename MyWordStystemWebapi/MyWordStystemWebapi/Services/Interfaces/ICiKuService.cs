@@ -14,6 +14,8 @@ namespace MyWordStystemWebapi.Services.Interfaces
         Task<List<CiKuWord>> GetUnlearnedWordsByViewNameAsync(int userid,string viewName);
 
 
+        Task<List<Myciku>> GetUnlearnedStartWordsBymyViewNameAsync(int userid);
+
         //Task<List<Myciku>> GetAllWordsBymyViewNameAsync(int userid, string wordbook);
         //Task updateStartWord(int UserId, int wordId, string start);
 

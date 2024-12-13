@@ -9,6 +9,8 @@ namespace MyWordStystemWebapi.Data
         public MywordDbContext(DbContextOptions<MywordDbContext> options) : base(options)
         {
         }
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // 配置 WordBookView 的主键
@@ -29,6 +31,7 @@ namespace MyWordStystemWebapi.Data
         public DbSet<AllWord> word { get; set; }
         
         public DbSet<LearningProgress> progress { get; set; }
+        public DbSet<Studydate_Table> Studydate_Table { get; set; }
 
 
 
