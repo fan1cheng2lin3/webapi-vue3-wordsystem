@@ -58,6 +58,11 @@ const routes = [
         name: 'putbook',
         component: () => import('../views/PutbookView.vue')
       },
+      {
+        path: '/Fuxi',
+        name: 'Fuxi',
+        component: () => import('../views/FuxiView.vue')
+      },
     ]
   },
 

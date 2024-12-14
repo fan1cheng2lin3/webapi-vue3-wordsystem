@@ -77,23 +77,40 @@
         </el-row>
       </div>
 
-      <!-- 详情弹窗 -->
-      <el-dialog v-model="dialogVisible" title="详细信息" width="600px">
-        <div v-if="selectedWord">
-          <p><strong>单词:</strong> {{ selectedWord.wordpre }}</p>
-          <p><strong>美式音标:</strong> {{ selectedWord.phonetic }}</p>
-          <p><strong>英式音标:</strong> {{ selectedWord.phonetic_uk }}</p>
-          <p><strong>释义:</strong> {{ selectedWord.explain }}</p>
-          <p><strong>例句:</strong></p>
-          <p>{{ selectedWord.sentence_en }}</p>
-          <p>{{ selectedWord.sentence_cn }}</p>
-          <p><strong>辅助记忆:</strong> {{ selectedWord.ancillary || '无' }}</p>
-          <!-- <el-button @click="speakWord" type="primary">朗读单词</el-button> -->
-        </div>
-        <template #footer>
-          <el-button @click="dialogVisible = false">关闭</el-button>
-        </template>
-      </el-dialog>
+    <!-- 详情弹窗 -->
+    <el-dialog 
+  v-model="dialogVisible" 
+  title="详细信息" 
+  :width="800" 
+  class-name="detail-dialog large-font">
+  <div v-if="selectedWord" class="detail-info">
+    <div class="info-item">
+      <strong>单词:</strong> {{ selectedWord.wordpre }}
+    </div>
+    <div class="info-item">
+      <strong>美式音标:</strong> {{ selectedWord.phonetic }}
+      <strong>英式音标:</strong> {{ selectedWord.phonetic_uk }}
+    </div>
+    <div class="info-item">
+      <strong>释义:</strong> {{ selectedWord.explain }}
+    </div>
+    <div class="info-item">
+      <strong>例句:</strong>
+      <div>{{ selectedWord.sentence_en }}</div>
+      <div>{{ selectedWord.sentence_cn }}</div>
+    </div>
+    <div class="info-item">
+      <strong>辅助记忆:</strong> {{ selectedWord.ancillary || '无' }}
+    </div>
+    <div class="info-item">
+      <el-button @click="speakWord(selectedWord)" type="primary">朗读单词</el-button>
+    </div>
+  </div>
+  <template #footer>
+    <el-button @click="dialogVisible = false">关闭</el-button>
+  </template>
+</el-dialog>
+
     </div>
   </div>
 </template>
@@ -319,6 +336,21 @@ const toggleTitle = () => {
 <style scoped>
 
 
+.el-card {
+  font-size: 1rem; /* 适当放大卡片内容的字体 */
+}
+.el-button {
+  font-size: 1.2rem; /* 增大按钮的字体 */
+}
+
+
+html, body {
+  font-size: 16px; /* 统一设置基础字体大小，可按需调整 */
+  line-height: 1.5; /* 增加可读性 */
+}
+
+
+
 .book-list {
   display: flex;
   flex-wrap: wrap;
@@ -481,4 +513,8 @@ h1, h2 {
   cursor: pointer;
   margin: 10px;
 }
+
+
+
+
 </style>

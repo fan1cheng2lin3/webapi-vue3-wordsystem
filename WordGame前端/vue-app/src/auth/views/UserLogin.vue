@@ -85,7 +85,7 @@ const submitForm = async (formEl) => {
   
   <style scoped>
   .login {
-    background: url("../../assets/logo2.png");
+    background: url("https://pic.616pic.com/bg_w1180/00/23/35/4uvodsvg7Q.jpg");
     height: 100%;
     width: 100%;
     position: fixed;

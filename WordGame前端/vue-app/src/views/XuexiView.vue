@@ -26,12 +26,10 @@
                 {{ word.explain }}
               </button>
             </div>
-
-            
           </div>
 
           <div v-else>
-            <p>所有单词已显示完毕。</p>
+            <p>所有单词已学习完毕。</p>
           </div>
         </div>
       </div>
@@ -241,24 +239,42 @@ const handleAnswer = async (word, index) => {
     // 设置为已选择状态
     selectedWord.value = word;
 
+
+
+    // 获取今天的日期并根据 newScore 计算 nextxuexi
+    const today = new Date();
+    let nextXueXiDate = new Date(today);
+
+    nextXueXiDate = new Date(today.setDate(today.getDate() + 1));
+    const nextXueXiDateString = nextXueXiDate.toISOString().split('T')[0]; // "yyyy-MM-dd"
+
+
     // 提交新分数到后端
     await axios.post("/LearningProgress/updateProgress", {
       wordId: wordIdToSend,
       Score: newScore, // 更新后的分数
       Status: "在学", // 状态
       count: 1,
+      nextxuexi:nextXueXiDateString
     });
   } catch (error) {
     console.error("更新分数失败", error);
   }
 };
 
-
+const speakWord = (word) => {
+  if (!word) return
+  const textToSpeak = `${word.wordpre}`
+  const utterance = new SpeechSynthesisUtterance(textToSpeak)
+  utterance.lang = 'en-US' // 设置语言为美式英语
+  speechSynthesis.speak(utterance)
+}
 
 // 显示下一个单词并准备选项
 const showNextWord = () => {
   if (currentIndex.value < words.value.length) {
     currentWord.value = words.value[currentIndex.value];
+
     // 使用 similar1 至 similar4 作为选项，并创建副本以避免直接修改原始数据
     shuffledWords.value = [
       { wordpre: currentWord.value.wordpre, explain: currentWord.value.explain },
@@ -270,9 +286,10 @@ const showNextWord = () => {
 
     // 打乱选项
     shuffledWords.value = shuffledWords.value.sort(() => Math.random() - 0.5);
-
+    
     buttonStyles.value = Array(shuffledWords.value.length).fill(''); // 清空按钮样式
     selectedWord.value = null; // 清空之前的选择
+    speakWord(currentWord.value);
   } else {
     currentWord.value = null; // 所有单词显示完毕
   }
@@ -280,44 +297,53 @@ const showNextWord = () => {
 
 // 标记单词状态并显示下一个单词
 const markWord = async (status) => {
-const scoreMap = {
-  easy: 3,
-  hard: -1,
-  retry: -3,
-};
+  const scoreMap = {
+    easy: 3,
+    hard: -1,
+    retry: -3,
+  };
 
-const wordIdToSend = triggeredByFunction.value === 'yushe' ? currentWord.value.id : currentWord.value.wordId;
+  const wordIdToSend = triggeredByFunction.value === 'yushe' ? currentWord.value.id : currentWord.value.wordId;
 
-try {
-  const response = await axios.get(`/LearningProgress/getprogress`);
-  const progressList = response.data || [];
-  const currentWordProgress = progressList.find((p) => p.wordId === wordIdToSend);
-  const currentScore = currentWordProgress?.score || 0;
-  const newScore = currentScore + scoreMap[status];
+  try {
+    const response = await axios.get(`/LearningProgress/getprogress`);
+    const progressList = response.data || [];
+    const currentWordProgress = progressList.find((p) => p.wordId === wordIdToSend);
+    const currentScore = currentWordProgress?.score || 0;
+    const newScore = currentScore + scoreMap[status];
 
-  // 禁用按钮并显示解释
-  disableButtons.value = true;
-  showExplain.value = true;
+    // 禁用按钮并显示解释
+    disableButtons.value = true;
+    showExplain.value = true;
 
-  // 等待 1 秒后执行后续操作
-  setTimeout(async () => {
-    await axios.post("/LearningProgress/updateProgress", {
-      wordId: wordIdToSend,
-      Score: newScore,
-      Status: "在学",
-      count: 1,
-    });
+    // 获取今天的日期并根据 newScore 计算 nextxuexi
+    const today = new Date();
+    let nextXueXiDate = new Date(today);
 
-    // 更新到下一个单词
-    showExplain.value = false;
-    currentIndex.value++;
-    showNextWord();
+    nextXueXiDate = new Date(today.setDate(today.getDate() + 1));
+    const nextXueXiDateString = nextXueXiDate.toISOString().split('T')[0]; // "yyyy-MM-dd"
+
+    // 等待 1 秒后执行后续操作
+    setTimeout(async () => {
+      const updatedStatus = newScore > 30 ? "已掌握" : "在学";
+      await axios.post("/LearningProgress/updateProgress", {
+        wordId: wordIdToSend,
+        Score: newScore,
+        Status: updatedStatus,
+        count: 1,
+        nextxuexi: nextXueXiDateString,
+      });
+
+      // 更新到下一个单词
+      showExplain.value = false;
+      currentIndex.value++;
+      showNextWord();
+      disableButtons.value = false;
+    }, 2000);
+  } catch (error) {
+    console.error("标记单词失败", error);
     disableButtons.value = false;
-  }, 2000);
-} catch (error) {
-  console.error("标记单词失败", error);
-  disableButtons.value = false;
-}
+  }
 };
 
 
@@ -327,114 +353,109 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.card {
-padding: 30px;
-border: 1px solid #c7c5c9;
-border-radius: 8px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-background-color: #cdcec7;
-width: 75%;
-height: 85%;
-margin: 50px auto; /* 设置居中和页边距 */
+.card { 
+    padding: 20px; /* 缩小内边距 */
+    border: 1px solid #c7c5c9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 缩小阴影 */
+    background-color: #cdcec7;
+    width: 60%; /* 缩小宽度 */
+    height: 70%; /* 缩小高度 */
+    margin: 30px auto; /* 减小外边距 */
 }
 
 strong.word {
-font-size: 80px; /* 增大字体 */
-font-weight: bold;
-margin-right: 10px; /* 为单词与音标增加间距 */
+    font-size: 50px; /* 缩小字体 */
+    font-weight: bold;
+    margin-right: 10px; /* 为单词与音标增加间距 */
 }
 
 span.phonetic {
-font-size: 30px; /* 增大音标字体 */
-color: #888; /* 设置音标颜色 */
+    font-size: 20px; /* 缩小音标字体 */
+    color: #888; /* 设置音标颜色 */
 }
 
 .buttons {
-margin-top: 20px;
-display: flex;
-flex-direction: column; /* 使按钮各自占一行 */
-gap: 10px; /* 设置按钮之间的间距 */
+    margin-top: 15px; /* 缩小顶部间距 */
+    display: flex;
+    flex-direction: column; /* 使按钮各自占一行 */
+    gap: 8px; /* 减小按钮之间的间距 */
 }
 
 /* 为"容易"、"困难"、"重来"按钮设置单独样式 */
 .buttons button {
-padding: 15px;
-border: none;
-border-radius: 8px;
-background-color: #fff;
-color: black;
-cursor: pointer;
-font-size: 28px;
-width: 100%; /* 按钮占满一整行 */
-box-sizing: border-box; /* 确保按钮宽度正确 */
-transition: background-color 0.3s ease; /* 设置背景色过渡效果 */
+    padding: 10px; /* 缩小内边距 */
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+    font-size: 20px; /* 缩小字体 */
+    width: 100%; /* 按钮占满一整行 */
+    box-sizing: border-box; /* 确保按钮宽度正确 */
+    transition: background-color 0.3s ease; /* 设置背景色过渡效果 */
 }
 
 button:hover {
-background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
 button:active {
-background-color: #552e2e;
+    background-color: #552e2e;
 }
-
-
 
 /* 另外的五个选项按钮，保持它们与"容易"、"困难"、"重来"按钮之间有间隙 */
 div#match .buttons button {
-margin-bottom: 20px; /* 为这五个选项按钮添加底部间距 */
+    margin-bottom: 15px; /* 缩小底部间距 */
 }
-
 
 button {
-  
-padding: 15px;
-border: none;
-border-radius: 50px;
-background-color: #fff;
-color: black;
-cursor: pointer;
-font-size: 18px;
-width: 60%; /* 按钮占满一定宽度 */
-box-sizing: border-box;
-transition: background-color 0.3s ease;
-margin-bottom: 10px; /* 按钮之间的间隙 */
-margin-left: auto; /* 自动居左 */
-margin-right: auto; /* 自动居右 */
-display: block; /* 使按钮成为块级元素 */
+    padding: 10px;
+    border: none;
+    border-radius: 30px; /* 调整为更小的圆角 */
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+    font-size: 16px; /* 缩小字体 */
+    width: 50%; /* 缩小按钮宽度 */
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    margin-bottom: 8px; /* 缩小间隙 */
+    margin-left: auto; /* 自动居左 */
+    margin-right: auto; /* 自动居右 */
+    display: block; /* 使按钮成为块级元素 */
 }
 
-
 button:hover {
-background-color: #68665d;
+    background-color: #68665d;
 }
 
 button:active {
-background-color: #ddd;
+    background-color: #ddd;
 }
 
 .easy-button {
-background-color: #008505; /* 绿色 */
-color: white;
-font-size: 28px;
+    background-color: #008505; /* 绿色 */
+    color: white;
+    font-size: 20px; /* 缩小字体 */
 }
 
 .hard-button {
-background-color: #b86f01; /* 橙色 */
-color: white;
-font-size: 28px;
+    background-color: #b86f01; /* 橙色 */
+    color: white;
+    font-size: 20px; /* 缩小字体 */
 }
 
 .retry-button {
-background-color: rgb(160, 11, 0); /* 红色 */
-color: white;
-font-size: 28px;
+    background-color: rgb(160, 11, 0); /* 红色 */
+    color: white;
+    font-size: 20px; /* 缩小字体 */
 }
 
 .explain {
-font-size: 35px;
-color: #040404;
-margin-left: 30px;
+    font-size: 25px; /* 缩小字体 */
+    color: #040404;
+    margin-left: 20px; /* 缩小左边距 */
 }
 
 </style>

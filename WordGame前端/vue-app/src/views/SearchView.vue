@@ -9,12 +9,12 @@
             <div class="card-header">
               <span>{{ word.wordpre }}</span>
               <!-- 收藏按钮 -->
-              <el-button 
-                @click.stop="toggleFavorite(word)" 
-                :type="word.isFavorite ? 'warning' : 'text'" 
-                class="favorite-button">
-                {{ word.isFavorite ? '已收藏' : '收藏' }}
-              </el-button>
+              <button v-if="word.status === 'start'" @click.stop="toggleFavorite(word)">
+                  已收藏
+                </button>
+                <button v-else @click.stop="toggleFavorite(word)">
+                  收藏
+                </button>
             </div>
             <div class="card-body">
               <p><strong>音标:</strong> {{ word.phonetic || word.phonetic_uk }}</p>
@@ -36,7 +36,7 @@
         <p>{{ selectedWord.sentence_en }}</p>
         <p>{{ selectedWord.sentence_cn }}</p>
         <p><strong>辅助记忆:</strong> {{ selectedWord.ancillary || '无' }}</p>
-        <el-button @click="speakWord" type="primary">朗读单词</el-button>
+        <el-button @click="speakWord(selectedWord)" type="primary">朗读单词</el-button>
         
       </div>
       <template #footer>
@@ -57,6 +57,7 @@ const loading = ref(true)
 const error = ref(null)
 const dialogVisible = ref(false)
 const selectedWord = ref(null)
+
 
 // 搜索方法
 const fetchResults = async (query) => {
@@ -80,15 +81,18 @@ const fetchResults = async (query) => {
 
 // 切换收藏状态并更新数据库
 const toggleFavorite = async (word) => {
-  word.isFavorite = !word.isFavorite
+  const newStatus = word.status === 'start' ? 'unstart' : 'start';
+  const wordIdToSend =  word.id;
+
   try {
-    await axios.post('/words/favorite', { wordId: word.id, isFavorite: word.isFavorite })
+    await axios.post('/words/AddstartWord', { WordId: wordIdToSend, Status: newStatus });
+    word.status = newStatus;
   } catch (err) {
-    console.error('更新收藏状态失败', err.response?.data || err.message)
-    // 如果失败，恢复原状态
-    word.isFavorite = !word.isFavorite
+    console.error('更新收藏状态失败', err.response?.data || err.message);
+    word.status = word.status === 'start' ? 'unstart' : 'start';
   }
-}
+};
+
 
 // 显示详情并朗读单词
 const showDetails = (word) => {

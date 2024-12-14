@@ -180,6 +180,21 @@ namespace MyWordStystemWebapi.Controllers
         }
 
 
+        [HttpGet("GetzaixueWordsBymyViewName")]
+        public async Task<ActionResult<List<ZaixueMyciku>>> GetzaixuetWordsBymyViewName()
+        {
+            var userId = GetUserIdFromToken(); // 从 token 中获取用户 ID
+            if (userId == null)
+            {
+                return Unauthorized("无效的或过期的 token"); // 如果 token 无效或过期
+            }
+            Console.WriteLine($"User ID from token: {userId}");
+
+            var words = await _ciKuService.GetzaixueWordsBymyViewName(Convert.ToInt32(userId)); // 使用await等待异步结果
+
+            return Ok(words);
+        }
+
 
         [HttpGet("search")]
         public async Task<IActionResult> SearchWords([FromQuery] string query)
@@ -189,22 +204,26 @@ namespace MyWordStystemWebapi.Controllers
                 return BadRequest("搜索内容不能为空");
             }
 
-            // 获取所有单词，并对它们进行排序和筛选
-            var searchResults = await _context.word
-                .Where(word => word.wordpre.Contains(query) || word.explain.Contains(query))
-                .OrderByDescending(word => word.wordpre.StartsWith(query))  // 首先按是否是前缀匹配排序
-                .ThenByDescending(word => word.wordpre.Length)  // 长度更长的前缀匹配放前面
-                .ThenBy(word => word.wordpre)  // 按字母顺序排序
-                .Take(500)  // 最多返回50个结果
+            // 查询完全匹配的结果
+            var exactMatches = await _context.word
+                .Where(word => word.wordpre == query || word.explain == query)
                 .ToListAsync();
 
+            // 查询部分匹配但不包括完全匹配的结果
+            var partialMatches = await _context.word
+                .Where(word => (word.wordpre.Contains(query) || word.explain.Contains(query))
+                               && word.wordpre != query
+                               && word.explain != query)
+                .Take(500 - exactMatches.Count)
+                .ToListAsync();
+
+            // 合并结果，完全匹配的结果排在前面
+            var searchResults = exactMatches.Concat(partialMatches).ToList();
 
             if (searchResults.Any())
             {
                 return Ok(searchResults);
-
             }
-
             else
             {
                 return NotFound("未找到匹配的单词");

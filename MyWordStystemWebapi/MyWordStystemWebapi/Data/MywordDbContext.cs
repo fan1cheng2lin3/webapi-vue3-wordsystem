@@ -27,6 +27,7 @@ namespace MyWordStystemWebapi.Data
 
         public DbSet<CiKuWord> CiKuWords { get; set; }
         public DbSet<Myciku> WordBookView { get; set; }
+        public DbSet<ZaixueMyciku> vw_WordProgress { get; set; }
 
         public DbSet<AllWord> word { get; set; }
         

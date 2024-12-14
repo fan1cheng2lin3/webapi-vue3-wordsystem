@@ -157,7 +157,33 @@ namespace MyWordStystemWebapi.Services.Implmentation
         }
 
 
+        public async Task<List<ZaixueMyciku>> GetzaixueWordsBymyViewName(int userid)
+        {
+            // 获取今天的日期字符串
+            var todayString = DateTime.UtcNow.ToString("yyyy-MM-dd").Trim();
 
+            // 直接在查询中实现过滤
+            var query = @"
+SELECT *
+FROM vw_WordProgress
+WHERE UserId = @UserId
+AND Status = '在学'
+AND nextxuexi = @TodayString
+AND WordId NOT IN (
+    SELECT WordId
+    FROM vw_WordProgress
+    WHERE UserId = @UserId
+    AND lasttime = @TodayString
+)
+ORDER BY WordId";
+
+            // 使用异步查询和参数化查询
+            var words = await _context.vw_WordProgress.FromSqlRaw(query,
+                new SqlParameter("@UserId", userid),
+                new SqlParameter("@TodayString", todayString)).ToListAsync();
+
+            return words;
+        }
         //public async Task<List<Myciku>> GetAllWordsBymyViewNameAsync(int userid, string wordbook)
         //{
         //    int pageNumber = 1;

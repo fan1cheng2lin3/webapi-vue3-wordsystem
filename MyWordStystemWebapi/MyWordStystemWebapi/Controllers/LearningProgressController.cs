@@ -65,7 +65,8 @@ namespace MyWordStystemWebapi.Controllers
                 existingProgress.Score = progress.Score;
                 existingProgress.Status = progress.Status;
                 existingProgress.count = progress.count;
-                existingProgress.lasttime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"); // 更新学习时间
+                existingProgress.nextxuexi = progress.nextxuexi; // 更新学习时间
+                existingProgress.lasttime = DateTime.Now.ToString("yyyy-MM-dd"); // 更新学习时间
             }
             else
             {
@@ -78,7 +79,8 @@ namespace MyWordStystemWebapi.Controllers
                     Score = progress.Score,
                     Status = progress.Status,
                     count = progress.count,
-                    lasttime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), // 设置学习时间
+                    nextxuexi = progress.nextxuexi, // 设置学习时间
+                    lasttime = DateTime.Now.ToString("yyyy-MM-dd"), // 设置学习时间
                 };
                 _context.progress.Add(newProgress);
             }
@@ -136,12 +138,10 @@ namespace MyWordStystemWebapi.Controllers
                 return Unauthorized("无效的或过期的 token"); // 如果 token 无效或过期
             }
 
-            // 获取今天的日期字符串
-            var todayString = DateTime.UtcNow.ToString("yyyy-MM-dd");
 
             // 计算除了今天的所有记录数量
             int wordCount = _context.progress
-                                    .Where(wp => wp.UserId == Convert.ToInt32(userId) && wp.lasttime.CompareTo(todayString) != 0)
+                                    .Where(wp => wp.UserId == Convert.ToInt32(userId))
                                     .Count();
 
             return Ok(wordCount); // 直接返回数量
@@ -163,7 +163,7 @@ namespace MyWordStystemWebapi.Controllers
 
             // 计算除了今天的所有记录数量
             int wordCount = _context.progress
-                                    .Where(wp => wp.UserId == Convert.ToInt32(userId) && wp.lasttime.CompareTo(todayString) > 0)
+                                    .Where(wp => wp.UserId == Convert.ToInt32(userId) && wp.lasttime.CompareTo(todayString) == 0)
                                     .Count();
 
             return Ok(wordCount); // 直接返回数量

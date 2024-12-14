@@ -9,6 +9,7 @@
         public int reScore { get; set; }
         public int Score { get; set; }
         public string? lasttime { get; set; }
+        public string? nextxuexi { get; set; }
         public string? Status { get; set; }
 
 
