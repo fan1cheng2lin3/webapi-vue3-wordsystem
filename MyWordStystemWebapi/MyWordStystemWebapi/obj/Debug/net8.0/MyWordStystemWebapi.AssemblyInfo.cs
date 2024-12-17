@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyWordStystemWebapi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+984e5e50de1ad10793be81439eb04abc36377d30")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16c770ca30903444ffb639f5fd0670edc11c7f4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyWordStystemWebapi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyWordStystemWebapi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

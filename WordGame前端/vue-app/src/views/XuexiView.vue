@@ -27,7 +27,6 @@
               </button>
             </div>
           </div>
-
           <div v-else>
             <p>所有单词已学习完毕。</p>
           </div>
@@ -57,6 +56,20 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 const startTime = ref(null);
 const timeElapsed = ref(0);
 let timer = null;
+// 定义响应式数据
+const wordBook = ref(""); // 存储 wordbook 名称
+const words = ref([]); // 存储单词信息
+const currentIndex = ref(0); // 当前显示的单词索引
+const currentWord = ref(null); // 当前显示的单词
+const loading = ref(false); // 用于显示加载状态
+const errorMessage = ref(""); // 错误提示
+const selectedWord = ref(null); // 存储用户选择的单词
+const shuffledWords = ref([]); // 存储所有选项（包含正确的和相似词）
+const buttonStyles = ref([]); // 存储每个按钮的样式
+const triggeredByFunction = ref(null); // 用于记录触发的函数类型
+const showExplain = ref(false); // 控制解释的显示
+const disableButtons = ref(false); // 控制按钮的禁用
+const results = ref([]);
 
 onMounted(() => {
   // 页面加载时记录开始时间
@@ -99,20 +112,7 @@ async function handleBeforeUnload(event) {
 async function handleManualSend() {
   await handleBeforeUnload({ returnValue: '' });
 }
-// 定义响应式数据
-const wordBook = ref(""); // 存储 wordbook 名称
-const words = ref([]); // 存储单词信息
-const currentIndex = ref(0); // 当前显示的单词索引
-const currentWord = ref(null); // 当前显示的单词
-const loading = ref(false); // 用于显示加载状态
-const errorMessage = ref(""); // 错误提示
-const selectedWord = ref(null); // 存储用户选择的单词
-const shuffledWords = ref([]); // 存储所有选项（包含正确的和相似词）
-const buttonStyles = ref([]); // 存储每个按钮的样式
-const triggeredByFunction = ref(null); // 用于记录触发的函数类型
-const showExplain = ref(false); // 控制解释的显示
-const disableButtons = ref(false); // 控制按钮的禁用
-const results = ref([]);
+
 
 // 请求数据
 const fetchWordBookAndWords = async () => {
@@ -142,8 +142,6 @@ const fetchWordBookAndWords = async () => {
       showNextWord(); // 显示第一个单词
       return; // 成功获取数据后直接返回
 
-
-
       }else {
 
         throw new Error("已经学习完所有生词本的内容！");
@@ -151,15 +149,13 @@ const fetchWordBookAndWords = async () => {
             
     }
 
-
-
     // 2. 尝试从第一个接口获取单词数据
     let wordsResponse;
     try {
       wordsResponse = await axios.get(`/words/GetUnlearnedWordsByViewName/${wordBook.value}`);
       if (wordsResponse.data && wordsResponse.data.length > 0) {
         triggeredByFunction.value = 'yushe'; // 更新触发函数类型
-        words.value = wordsResponse.data; // 如果找到数据，直接使用
+        words.value = wordsResponse.data; // 如果找到数据，直接使用-
         showNextWord(); // 显示第一个单词
         return; // 成功获取数据后直接返回
       } else {

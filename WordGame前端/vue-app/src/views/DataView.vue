@@ -66,10 +66,10 @@ import * as echarts from 'echarts';
 const router = useRouter();
 const books = ref([]);
 const nowbooks = ref([]);
-const nowtime = ref([]);
-const Totaltime = ref([]);
-const wordcoutnowday = ref([]);
-const wordcout = ref([]);
+const nowtime = ref([0]);
+const Totaltime = ref([0]);
+const wordcoutnowday = ref([0]);
+const wordcout = ref([0]);
 // 在组件挂载时获取词书数据
 onMounted(async () => {
 

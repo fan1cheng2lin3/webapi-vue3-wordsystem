@@ -67,7 +67,6 @@ namespace MyWordStystemWebapi.Controllers
 
         }
 
-        // 导入单词到词书
         [HttpPost("ImportWordsToWordBook")]
         public async Task<IActionResult> ImportWordsToWordBook([FromForm] ImportWordsDto importWordsDto)
         {
@@ -82,51 +81,71 @@ namespace MyWordStystemWebapi.Controllers
                 return BadRequest("未上传文件");
             }
 
-            // 日志：调试输入内容
-            Console.WriteLine($"Received WordBookName: {importWordsDto.WordBookName}");
-            Console.WriteLine($"File Length: {importWordsDto.File.Length}");
-
-            var wordsToImport = await new StreamReader(importWordsDto.File.OpenReadStream()).ReadToEndAsync();
-            var wordArray = wordsToImport
-                .ToLower()
-                .Split(new[] { ' ', '\r', '\n', '\t' }, StringSplitOptions.RemoveEmptyEntries)
-                .Where(word => word.Length > 0);
-
-            foreach (var word in wordArray)
+            try
             {
-                var wordEntity = await _context.word.FirstOrDefaultAsync(w => w.wordpre == word);
-                if (wordEntity != null)
+                // 读取文件并分割单词
+                var wordsToImport = await new StreamReader(importWordsDto.File.OpenReadStream()).ReadToEndAsync();
+                var wordArray = wordsToImport
+                    .ToLower() // 转换为小写
+                    .Split(new[] { ' ', '\r', '\n', '\t', ',', '.', ';', '!', '?' }, StringSplitOptions.RemoveEmptyEntries) // 分割单词
+                    .Where(word => !string.IsNullOrWhiteSpace(word)) // 去除空字符串
+                    .Distinct(); // 去重
+
+                // 获取数据库中所有单词的小写映射
+                var dbWords = await _context.word
+                    .Select(w => new { w.id, WordPreLower = w.wordpre.ToLower() })
+                    .ToListAsync();
+
+                // 构造单词的字典以快速查找
+                var dbWordDict = dbWords.ToDictionary(w => w.WordPreLower, w => w.id);
+
+                // 构建需要插入的单词关系
+                var userWordBooks = new List<WordBooks>();
+
+                foreach (var word in wordArray)
                 {
-                    // 检查是否已经存在相同的 UserId, WordId, WordBookName 组合
-                    var existingEntry = await _context.UserWordbooks_Table
-                        .FirstOrDefaultAsync(uw => uw.UserId == Convert.ToInt32(userId) && uw.WordId == wordEntity.id && uw.WordBookName == importWordsDto.WordBookName);
-
-               
-
-                    // 如果没有找到相同的记录，则插入
-                    if (existingEntry == null)
+                    if (dbWordDict.TryGetValue(word, out var wordId))
                     {
-                        var userWordBookEntity = new WordBooks
+                        // 检查是否已经存在相同的记录
+                        var exists = await _context.UserWordbooks_Table.AnyAsync(uw =>
+                            uw.UserId == Convert.ToInt32(userId) &&
+                            uw.WordId == wordId &&
+                            uw.WordBookName == importWordsDto.WordBookName);
+
+                        if (!exists)
                         {
-                            UserId = Convert.ToInt32(userId),
-                            WordId = wordEntity.id,
-                            WordBookName = importWordsDto.WordBookName
-                        };
-
-                        // 打印日志查看是否准备插入数据
-                        Console.WriteLine($"Inserting WordId: {wordEntity.id}, UserId: {userId}, WordBookName: {importWordsDto.WordBookName}");
-                        await _context.UserWordbooks_Table.AddAsync(userWordBookEntity);
-                    }
-                    else
-                    {
-                        // 打印日志查看重复记录
-                        Console.WriteLine($"Duplicate entry found for WordId: {wordEntity.id}, UserId: {userId}, WordBookName: {importWordsDto.WordBookName}");
+                            // 不存在则添加到插入列表
+                            userWordBooks.Add(new WordBooks
+                            {
+                                UserId = Convert.ToInt32(userId),
+                                WordId = wordId,
+                                WordBookName = importWordsDto.WordBookName
+                            });
+                        }
                     }
                 }
+
+                // 批量插入需要添加的记录
+                if (userWordBooks.Any())
+                {
+                    await _context.UserWordbooks_Table.AddRangeAsync(userWordBooks);
+                    await _context.SaveChangesAsync();
+                    Console.WriteLine($"成功插入 {userWordBooks.Count} 条记录");
+                }
+                else
+                {
+                    Console.WriteLine("未发现新的单词需要插入");
+                }
+
+                return Ok(new { Message = "单词导入完成", InsertedCount = userWordBooks.Count });
             }
-            await _context.SaveChangesAsync();
-            return Ok();
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"导入过程中发生错误: {ex.Message}");
+                return StatusCode(500, "服务器内部错误");
+            }
         }
+
 
 
 

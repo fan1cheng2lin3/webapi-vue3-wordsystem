@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using MyWordStystemWebapi.Data;
 using MyWordStystemWebapi.DOT.Dtos;
@@ -26,6 +27,14 @@ namespace MyWordStystemWebapi.Controllers
             _context = context;
         }
 
+        // 验证表名是否合法（防止SQL注入攻击）
+        private bool IsValidTableName(string tableName)
+        {
+            // 只允许字母、数字和下划线的表名
+            return System.Text.RegularExpressions.Regex.IsMatch(tableName, @"^[a-zA-Z0-9_]+$");
+        }
+
+
         // 获取用户ID
         private string GetUserIdFromToken()
         {
@@ -47,6 +56,207 @@ namespace MyWordStystemWebapi.Controllers
             var userIdClaim = jsonToken?.Claims?.FirstOrDefault(c => c.Type == "sub");
             return userIdClaim?.Value; // 返回用户 ID
         }
+
+
+
+
+        [HttpGet("learning-progress/{tableName}")]
+        public async Task<IActionResult> GetLearningProgress(string tableName)
+        {
+            try
+            {
+                // 验证表名是否合法
+                if (string.IsNullOrWhiteSpace(tableName) || !IsValidTableName(tableName))
+                {
+                    return BadRequest("表名无效。");
+                }
+
+                double learningProgress = 0.0;
+
+                using (var connection = _context.Database.GetDbConnection())
+                {
+                    if (connection.State == System.Data.ConnectionState.Closed)
+                        await connection.OpenAsync();
+
+                    // 获取tableName表的总行数
+                    int totalCount;
+                    using (var command = connection.CreateCommand())
+                    {
+                        command.CommandText = $"SELECT COUNT(*) FROM [{tableName}]";
+                        totalCount = Convert.ToInt32(await command.ExecuteScalarAsync());
+                    }
+
+                    // 获取已学习的单词数（通过进度表_progress）
+                    int learnedCount;
+                    using (var command = connection.CreateCommand())
+                    {
+                        command.CommandText = $@"
+                    SELECT COUNT(*) 
+                    FROM [{tableName}] t
+                    INNER JOIN progress p ON t.id = p.WordId
+                    ";
+                        learnedCount = Convert.ToInt32(await command.ExecuteScalarAsync());
+                    }
+
+                    // 计算未学习的单词比例
+                    learningProgress =100 * ( 1.0-(double)(totalCount - learnedCount) / totalCount);
+                }
+
+                return Ok(new { learningProgress });
+
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"获取学习进度时发生错误: {ex.Message}");
+                return StatusCode(500, "服务器内部错误，请稍后再试。");
+            }
+        }
+
+
+        [HttpGet("learning-progress-wordbook")]
+        public async Task<IActionResult> GetLearningProgressForWordBook(string wordBookName)
+        {
+            try
+            {
+                // 从 token 获取 UserId
+                var userId = GetUserIdFromToken(); // 假设这个方法从 token 中获取用户 ID
+
+                if (userId == null)
+                {
+                    return Unauthorized("无效的或过期的 token"); // 如果 token 无效或过期
+                }
+
+                // 将 userId 转换为整数
+                int userIdInt = Convert.ToInt32(userId);
+
+                double learningProgress = 0.0;
+
+                using (var connection = _context.Database.GetDbConnection())
+                {
+                    if (connection.State == System.Data.ConnectionState.Closed)
+                        await connection.OpenAsync();
+
+                    // 获取符合条件的 WordBookView 表总行数
+                    int totalCount;
+                    using (var command = connection.CreateCommand())
+                    {
+                        command.CommandText = $@"
+                    SELECT COUNT(*) 
+                    FROM WordBookView w
+                    WHERE w.UserId = @UserId AND w.WordBookName = @WordBookName
+                ";
+                        command.Parameters.Add(new SqlParameter("@UserId", userIdInt)); // 使用转换后的 UserId
+                        command.Parameters.Add(new SqlParameter("@WordBookName", wordBookName));
+                        totalCount = Convert.ToInt32(await command.ExecuteScalarAsync());
+                    }
+
+                    if (totalCount == 0)
+                    {
+                        return NotFound("没有找到匹配的单词本记录。");
+                    }
+
+                    // 获取已学习的记录数（通过进度表 progress）
+                    int learnedCount;
+                    using (var command = connection.CreateCommand())
+                    {
+                        command.CommandText = $@"
+                    SELECT COUNT(*) 
+                    FROM WordBookView w
+                    INNER JOIN progress p ON w.WordId = p.WordId
+                    WHERE w.UserId = @UserId AND w.WordBookName = @WordBookName
+                ";
+                        command.Parameters.Add(new SqlParameter("@UserId", userIdInt)); // 使用转换后的 UserId
+                        command.Parameters.Add(new SqlParameter("@WordBookName", wordBookName));
+                        learnedCount = Convert.ToInt32(await command.ExecuteScalarAsync());
+                    }
+
+                    // 计算学习进度
+                    learningProgress = 100*((double)learnedCount / totalCount);
+                }
+
+                return Ok(new { learningProgress });
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"获取学习进度时发生错误: {ex.Message}");
+                return StatusCode(500, "服务器内部错误，请稍后再试。");
+            }
+        }
+
+
+
+
+        [HttpGet("learning-progress-start")]
+        public async Task<IActionResult> GetLearningProgressForStart()
+        {
+            try
+            {
+                // 从 token 获取 UserId
+                var userId = GetUserIdFromToken(); // 假设这个方法从 token 中获取用户 ID
+
+                if (userId == null)
+                {
+                    return Unauthorized("无效的或过期的 token"); // 如果 token 无效或过期
+                }
+
+                // 将 userId 转换为整数
+                int userIdInt = Convert.ToInt32(userId);
+
+                double learningProgress = 0.0;
+
+                using (var connection = _context.Database.GetDbConnection())
+                {
+                    if (connection.State == System.Data.ConnectionState.Closed)
+                        await connection.OpenAsync();
+
+                    // 获取符合条件的 Start_Table 表中 Status == 'start' 且 UserId 匹配的总行数
+                    int totalCount;
+                    using (var command = connection.CreateCommand())
+                    {
+                        command.CommandText = $@"
+                    SELECT COUNT(*) 
+                    FROM Start_Table s
+                    WHERE s.Status = 'start' AND s.UserId = @UserId
+                ";
+                        command.Parameters.Add(new SqlParameter("@UserId", userIdInt)); // 使用转换后的 UserId
+                        totalCount = Convert.ToInt32(await command.ExecuteScalarAsync());
+                    }
+
+                    if (totalCount == 0)
+                    {
+                        return NotFound("没有找到符合条件的记录。");
+                    }
+
+                    // 获取已学习的记录数（通过进度表 progress）
+                    int learnedCount;
+                    using (var command = connection.CreateCommand())
+                    {
+                        command.CommandText = $@"
+                    SELECT COUNT(*) 
+                    FROM Start_Table s
+                    INNER JOIN progress p ON s.WordId = p.WordId
+                    WHERE s.Status = 'start' AND s.UserId = @UserId
+                     AND p.UserId = @UserId
+                ";
+                        command.Parameters.Add(new SqlParameter("@UserId", userIdInt)); // 使用转换后的 UserId
+                        learnedCount = Convert.ToInt32(await command.ExecuteScalarAsync());
+                    }
+
+                    // 计算学习进度
+                    learningProgress = (double)learnedCount / totalCount;
+                }
+
+                return Ok(new { learningProgress });
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"获取学习进度时发生错误: {ex.Message}");
+                return StatusCode(500, "服务器内部错误，请稍后再试。");
+            }
+        }
+
+       
+
 
 
         [HttpGet("GetWordsByViewName/{viewName}")]

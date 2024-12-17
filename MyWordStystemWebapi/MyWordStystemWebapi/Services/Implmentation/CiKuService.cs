@@ -19,13 +19,9 @@ namespace MyWordStystemWebapi.Services.Implmentation
             _context = context;
         }
 
-   
-
 
         public async Task<List<CiKuWord>> GetWordsByViewNameAsync(string viewName)
         {
-            int pageNumber = 1;
-            int pageSize = 500;
 
             if (string.IsNullOrEmpty(viewName))
             {
@@ -34,7 +30,7 @@ namespace MyWordStystemWebapi.Services.Implmentation
 
             }
 
-            var query = $"SELECT * FROM {viewName} ORDER BY Id OFFSET {(pageNumber - 1) * pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY";
+            var query = $"SELECT * FROM {viewName}";
 
             // 使用异步查询
             var words = await _context.CiKuWords.FromSqlRaw(query).ToListAsync();
@@ -46,6 +42,104 @@ namespace MyWordStystemWebapi.Services.Implmentation
             return words;
 
         }
+
+
+        //public async Task<List<CiKuWord>> GetWordsByViewNameAsync(string viewName)
+        //{
+        //    int pageNumber = 1;
+        //    int pageSize = 500;
+
+        //    if (string.IsNullOrEmpty(viewName))
+        //    {
+        //        Console.WriteLine("无效的视图名称");
+        //        return new List<CiKuWord>(); // 返回空列表
+
+        //    }
+
+        //    var query = $"SELECT * FROM {viewName} ORDER BY Id OFFSET {(pageNumber - 1) * pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY";
+
+        //    // 使用异步查询
+        //    var words = await _context.CiKuWords.FromSqlRaw(query).ToListAsync();
+        //    if (!words.Any())
+        //    {
+        //        Console.WriteLine($"视图 {viewName} 返回为空");
+        //    }
+
+        //    return words;
+
+        //}
+
+
+        //public async Task<List<CiKuWord>> GetWordsByViewNameAsync(string viewName)
+        //{
+        //    if (string.IsNullOrEmpty(viewName))
+        //    {
+        //        Console.WriteLine("无效的视图名称");
+        //        return new List<CiKuWord>();
+        //    }
+
+        //    int batchSize = 500;
+        //    int currentOffset = 0;
+        //    var allWords = new List<CiKuWord>();
+        //    bool hasMoreData = true;
+
+        //    // 使用 SemaphoreSlim 控制并发
+        //    using (var semaphore = new SemaphoreSlim(1)) // 设置最大并发数为 1（顺序执行）
+        //    {
+        //        var tasks = new List<Task>();
+
+        //        while (hasMoreData)
+        //        {
+        //            int offset = currentOffset;
+
+        //            // 启动并发任务
+        //            var task = Task.Run(async () =>
+        //            {
+        //                await semaphore.WaitAsync();
+        //                try
+        //                {
+        //                    var query = $"SELECT * FROM {viewName} ORDER BY Id OFFSET {offset} ROWS FETCH NEXT {batchSize} ROWS ONLY";
+        //                    var currentBatch = await _context.CiKuWords.FromSqlRaw(query).ToListAsync();
+
+        //                    if (currentBatch.Any())
+        //                    {
+        //                        lock (allWords) // 确保多线程写入列表时不会冲突
+        //                        {
+        //                            allWords.AddRange(currentBatch);
+        //                        }
+        //                    }
+        //                    else
+        //                    {
+        //                        hasMoreData = false;
+        //                    }
+        //                }
+        //                finally
+        //                {
+        //                    semaphore.Release();
+        //                }
+        //            });
+
+        //            tasks.Add(task);
+        //            currentOffset += batchSize;
+
+        //            // 控制任务的并发数量
+        //            if (tasks.Count >= 5) // 最大并发数为 5
+        //            {
+        //                await Task.WhenAny(tasks); // 等待任意一个任务完成
+        //                tasks.RemoveAll(t => t.IsCompleted); // 移除已完成的任务
+        //            }
+        //        }
+
+        //        await Task.WhenAll(tasks);
+        //    }
+
+        //    Console.WriteLine($"全部加载完成，共加载 {allWords.Count} 个单词");
+        //    return allWords;
+        //}
+
+
+
+
 
         public async Task<List<CiKuWord>> GetUnlearnedWordsByViewNameAsync(int userId, string viewName)
         {
