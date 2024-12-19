@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyWordStystemWebapi.Data;
+using MyWordStystemWebapi.DOT.Dtos;
 using MyWordStystemWebapi.Models;
 using MyWordStystemWebapi.Services.Implmentation;
 using MyWordStystemWebapi.Services.Interfaces;
@@ -51,7 +52,7 @@ namespace MyWordStystemWebapi.Controllers
 
 
         [HttpPost("forgot-password")]
-        public async Task<IActionResult> ForgotPassword(AuthenticateRequest model)
+        public async Task<IActionResult> ForgotPassword(emailDto model)
         {
             var user = _userService.GetUserByEmail(model.Email);
             if (user == null)
@@ -65,6 +66,7 @@ namespace MyWordStystemWebapi.Controllers
             {
                 return BadRequest(new { message = "密码重置失败" });
             }
+
 
             // 发送邮件通知用户密码已更改
             _emailService.SendEmail(model.Email, "密码重置", $"您的新密码是：{newPassword}");
@@ -132,15 +134,19 @@ namespace MyWordStystemWebapi.Controllers
 
 
         [HttpPost("register")]
-        public ActionResult<bool> Register(User user, string password)
+        public ActionResult<bool> Register(User user)
         {
-            var success = _userService.RegisterUser(user, password);
+            var success = _userService.RegisterUser(user);
             if (!success)
             {
                 return BadRequest(new { message = "注册失败，用户已存在或输入无效。" });
             }
             return Ok(true);
         }
+
+
+
+
 
         //获取用户在学词书
         [HttpGet("getbook")]

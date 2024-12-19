@@ -16,6 +16,16 @@
         </div>
       </div>
 
+      <div class="collect-word-book2">
+        <div class="book-list">
+          <div class="book-container">
+            <img :src='"https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain"'  @click="getyixueWordbooks()"/>
+         
+            <h3>已学单词</h3>
+          </div>
+        </div>
+      </div>
+
       
       <div class="my-book">
         <div class="book-list">
@@ -145,6 +155,96 @@ const presetBooks = ref([
     imageUrl: 'https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain',
     viewName: 'View_Base'
   },
+  {
+    id: 1,
+    title: 'Associate Degree',
+    imageUrl: 'https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain',
+    viewName: 'View_AssociateDegree'
+  },
+  {
+    id: 2,
+    title: 'Bachelor',
+    imageUrl: 'https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain',
+    viewName: 'View_Bachelor'
+  },
+  {
+    id: 3,
+    title: 'Base',
+    imageUrl: 'https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain',
+    viewName: 'View_Base'
+  },
+  {
+    id: 4,
+    title: 'CET4',
+    imageUrl: 'https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain',
+    viewName: 'View_CET4'
+  },
+  {
+    id: 5,
+    title: '六级大纲',
+    imageUrl: 'https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain',
+    viewName: 'View_CET6'
+  },
+  {
+    id: 6,
+    title: 'Doctor',
+    imageUrl: 'https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain',
+    viewName: 'View_Doctor'
+  },
+  {
+    id: 7,
+    title: 'HighSchool',
+    imageUrl: 'https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain',
+    viewName: 'View_HighSchool'
+  },
+  {
+    id: 8,
+    title: 'MiddleSchool',
+    imageUrl: 'https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain',
+    viewName: 'View_MiddleSchool'
+  },
+  {
+    id: 9,
+    title: 'PrimarySchool',
+    imageUrl: 'https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain',
+    viewName: 'View_PrimarySchool'
+  },
+  {
+    id: 10,
+    title: 'PublicService',
+    imageUrl: 'https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain',
+    viewName: 'View_PublicService'
+  },
+  {
+    id: 11,
+    title: 'SAT',
+    imageUrl: 'https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain',
+    viewName: 'View_SAT'
+  },
+  {
+    id: 12,
+    title: 'Super',
+    imageUrl: 'https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain',
+    viewName: 'View_Super'
+  },
+  {
+    id: 13,
+    title: 'TOEFL',
+    imageUrl: 'https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain',
+    viewName: 'View_TOEFL'
+  },
+  {
+    id: 14,
+    title: 'Trade',
+    imageUrl: 'https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain',
+    viewName: 'View_Trade'
+  },
+  {
+    id: 15,
+    title: 'Workplace',
+    imageUrl: 'https://th.bing.com/th/id/OIP.YnDSAk0EwMlWLmlGAkftwwHaHa?rs=1&pid=ImgDetMain',
+    viewName: 'View_Workplace'
+  },
  
 ]);
 
@@ -199,8 +299,9 @@ async function deleteBook(bookname) {
     alert('删除失败，请稍后重试');
   }
 
-
 }
+
+
 
 // 自定义词书方法
 const getmyWordbooks = async (viewName, book) => {
@@ -229,6 +330,25 @@ const getstartWordbooks = async () => {
 
   try {
     const response = await axios.get(`/words/GetStartWordsBymyViewName`);
+    results.value = response.data.map(word => ({ ...word }));
+  } catch (err) {
+    error.value = '加载失败';
+  } finally {
+    loading.value = false;
+  }
+}
+
+
+
+// 已学本
+const getyixueWordbooks = async () => {
+  loading.value = true;
+  error.value = null;
+  isWordsVisible.value = true;
+  triggeredByFunction.value = 'getstartWordbooks'; // 更新触发函数类型
+
+  try {
+    const response = await axios.get(`/words/GetyixueWordsBymyViewName`);
     results.value = response.data.map(word => ({ ...word }));
   } catch (err) {
     error.value = '加载失败';
@@ -417,9 +537,15 @@ h1, h2 {
   border-radius: 1px;
 }
 
+.collect-word-book2{
+  width: 10%;
+  background-color: #f1f1f1;
+  padding: 30px;
+  border-radius: 1px;
+}
 
 .my-book {
-  width: 70%;
+  width: 65%;
   background-color: #f1f1f1;
   padding: 20px;
   border-radius: 5px;

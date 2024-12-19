@@ -8,6 +8,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using MyWordStystemWebapi.Data;
+using System.Security.Cryptography;
 
 namespace MyWordStystemWebapi.Services.Implmentation
 {
@@ -30,16 +31,47 @@ namespace MyWordStystemWebapi.Services.Implmentation
         }
 
 
+        //public AuthenticateResponse Autnenticate(AuthenticateRequest model)
+        //{
+        //    try
+        //    {
+        //        // 验证用户账号密码
+        //        var user = _context.user_Table.SingleOrDefault(u => u.Email == model.Email && u.Password == model.Password);
+
+        //        if (user == null)
+        //        {
+        //            return null;
+        //        }
+
+        //        // 创建令牌
+        //        var token = GenerateJwtToken(user);
+        //        return new AuthenticateResponse(user, token);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // 记录日志 (根据需要替换为实际日志工具)
+        //        Console.WriteLine($"Authentication error: {ex.Message}");
+        //        throw;
+        //    }
+        //}
+
+
         public AuthenticateResponse Autnenticate(AuthenticateRequest model)
         {
             try
             {
                 // 验证用户账号密码
-                var user = _context.user_Table.SingleOrDefault(u => u.Email == model.Email && u.Password == model.Password);
+                var user = _context.user_Table.SingleOrDefault(u => u.Email == model.Email);
 
                 if (user == null)
                 {
-                    return null;
+                    return null; // 用户不存在
+                }
+
+                // 使用用户提供的密码和存储的盐值来验证密码
+                if (!SecurityHelper.VerifyPasswordHash(model.Password, user.Password, user.Salt))
+                {
+                    return null; // 密码不匹配
                 }
 
                 // 创建令牌
@@ -147,14 +179,20 @@ namespace MyWordStystemWebapi.Services.Implmentation
                 return false; // 用户不存在
             }
 
-            user.Password = newPassword; // 更新密码
+            // 生成新的盐值
+            var newSalt = GenerateSalt();
+            // 密码加密
+            user.Password = SecurityHelper.GenerateHash(newPassword, newSalt);
+            user.Salt = newSalt; // 更新盐值
+
             _context.SaveChanges();
             return true;
         }
 
+     
 
 
-        public bool RegisterUser(User user, string password)
+        public bool RegisterUser(User user)
         {
             // 检查用户是否已存在
             var existingUser = _context.user_Table.FirstOrDefault(u => u.Email == user.Email);
@@ -163,13 +201,39 @@ namespace MyWordStystemWebapi.Services.Implmentation
                 return false; // 用户已存在
             }
 
-            // 密码加密（示例中未加密，实际应用中需要加密）
-            user.Password = password;
+            // 生成盐值
+            var salt = GenerateSalt();
+            // 密码加密
+            user.Password = SecurityHelper.GenerateHash(user.Password, salt);
+            user.Salt = salt; // 保存盐值到数据库，以便后续验证
 
             _context.user_Table.Add(user);
             _context.SaveChanges();
             return true;
         }
+
+        private string GenerateSalt()
+        {
+            var bytes = new byte[128];
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(bytes);
+            }
+            return Convert.ToBase64String(bytes);
+        }
+
+        public bool VerifyUserPassword(int userId, string password)
+        {
+            var user = _context.user_Table.Find(userId);
+            if (user == null)
+            {
+                return false; // 用户不存在
+            }
+
+            // 使用存储的盐值验证密码
+            return SecurityHelper.VerifyPasswordHash(password, user.Password, user.Salt);
+        }
+
 
     }
 }

@@ -243,7 +243,7 @@ namespace MyWordStystemWebapi.Controllers
                     }
 
                     // 计算学习进度
-                    learningProgress = (double)learnedCount / totalCount;
+                    learningProgress = 100*(double)learnedCount / totalCount;
                 }
 
                 return Ok(new { learningProgress });
@@ -269,6 +269,7 @@ namespace MyWordStystemWebapi.Controllers
             }
             return Ok(words);
         }
+
 
 
         [HttpGet("GetUnlearnedWordsByViewName/{viewName}")]
@@ -404,6 +405,28 @@ namespace MyWordStystemWebapi.Controllers
 
             return Ok(words);
         }
+
+        
+
+
+
+
+        [HttpGet("GetyixueWordsBymyViewName")]
+        public async Task<ActionResult<List<ZaixueMyciku>>> GetyixueWordsBymyViewName()
+        {
+            var userId = GetUserIdFromToken(); // 从 token 中获取用户 ID
+            if (userId == null)
+            {
+                return Unauthorized("无效的或过期的 token"); // 如果 token 无效或过期
+            }
+            Console.WriteLine($"User ID from token: {userId}");
+
+            var words = await _ciKuService.GetyixueWordsBymyViewName(Convert.ToInt32(userId)); // 使用await等待异步结果
+
+            return Ok(words);
+        }
+
+
 
 
         [HttpGet("search")]

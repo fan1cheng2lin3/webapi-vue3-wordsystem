@@ -258,18 +258,18 @@ namespace MyWordStystemWebapi.Services.Implmentation
 
             // 直接在查询中实现过滤
             var query = @"
-SELECT *
-FROM vw_WordProgress
-WHERE UserId = @UserId
-AND Status = '在学'
-AND nextxuexi = @TodayString
-AND WordId NOT IN (
-    SELECT WordId
-    FROM vw_WordProgress
-    WHERE UserId = @UserId
-    AND lasttime = @TodayString
-)
-ORDER BY WordId";
+                SELECT *
+                FROM vw_WordProgress
+                WHERE UserId = @UserId
+                AND Status = '在学'
+                AND nextxuexi = @TodayString
+                AND WordId NOT IN (
+                    SELECT WordId
+                    FROM vw_WordProgress
+                    WHERE UserId = @UserId
+                    AND lasttime = @TodayString
+                )
+                ORDER BY WordId";
 
             // 使用异步查询和参数化查询
             var words = await _context.vw_WordProgress.FromSqlRaw(query,
@@ -278,6 +278,32 @@ ORDER BY WordId";
 
             return words;
         }
+
+
+
+        public async Task<List<ZaixueMyciku>> GetyixueWordsBymyViewName(int userid)
+        {
+            // 使用参数化查询防止 SQL 注入
+            var query = @"
+        SELECT *
+        FROM vw_WordProgress
+        WHERE UserId = @UserId
+          AND Status = '在学'
+        ORDER BY WordId";
+
+            var userIdParam = new SqlParameter("@UserId", userid);
+
+            // 异步查询
+            var words = await _context.vw_WordProgress
+                .FromSqlRaw(query, userIdParam)
+                .AsNoTracking() // 确保不进行缓存
+                .ToListAsync();
+
+            return words;
+        }
+
+
+
         //public async Task<List<Myciku>> GetAllWordsBymyViewNameAsync(int userid, string wordbook)
         //{
         //    int pageNumber = 1;

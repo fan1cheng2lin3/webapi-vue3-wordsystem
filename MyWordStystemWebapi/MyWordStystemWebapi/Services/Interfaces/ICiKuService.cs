@@ -18,6 +18,8 @@ namespace MyWordStystemWebapi.Services.Interfaces
 
         Task<List<ZaixueMyciku>> GetzaixueWordsBymyViewName(int userid);
 
+        Task<List<ZaixueMyciku>> GetyixueWordsBymyViewName(int userid);
+
         //Task<List<Myciku>> GetAllWordsBymyViewNameAsync(int userid, string wordbook);
         //Task updateStartWord(int UserId, int wordId, string start);
 

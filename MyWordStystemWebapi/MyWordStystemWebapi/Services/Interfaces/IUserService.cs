@@ -16,7 +16,7 @@ namespace MyWordStystemWebapi.Services.Interfaces
 
         bool ChangePassword(int userId, string newPassword);
 
-        bool RegisterUser(User user, string password);
+        bool RegisterUser(User user);
 
 
     }
